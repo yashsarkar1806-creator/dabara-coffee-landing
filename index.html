@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dabara &amp; Co. · South Indian filter coffee, delivered (fictional brand)</title>
+  <meta name="description" content="Concept landing page for Dabara & Co., a fictional DTC filter-coffee subscription. Portfolio project by Yash Sarkar.">
+  <meta property="og:title" content="Dabara & Co. · filter kaapi, delivered">
+  <meta property="og:description" content="Fictional DTC coffee brand landing page with A/B headlines, a blend quiz and a subscription builder.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="notice" role="note">Portfolio concept: Dabara &amp; Co. is a fictional brand. Reviews and numbers on this page are sample copy, not real customers. <a href="https://github.com/yashsarkar1806-creator/dabara-coffee-landing">See the case study</a>.</div>
+  <header class="nav">
+    <span class="logo">Dabara <em>&amp;</em> Co.</span>
+    <nav><a href="#how">How it works</a><a href="#quiz-sec">Find your blend</a><a href="#build">Subscribe</a><a href="#faq">FAQ</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span id="variant-badge" class="badge"></span>
+      <h1 id="hero-title">Real South Indian filter coffee.</h1>
+      <p id="hero-sub" class="lede"></p>
+      <div class="cta-row"><a class="btn" href="#quiz-sec">Find my blend</a><a class="btn ghost" href="#build">Build a subscription</a></div>
+      <ul class="proof"><li>Roasted to order</li><li>Posted within 72 hours</li><li>Pause or cancel any time</li></ul>
+    </section>
+
+    <section id="how" class="grid3">
+      <div><h3>1. Pick a blend</h3><p>Three blends, from classic 80/20 chicory to pure estate arabica. The 30-second quiz picks for you.</p></div>
+      <div><h3>2. We roast and grind</h3><p>Ground fine for a steel filter or a French press, then sealed in a one-way valve bag.</p></div>
+      <div><h3>3. Brew in 4 minutes</h3><p>Our quick-decoction guide gets a thick, frothy dabara-tumbler cup on a weekday morning.</p></div>
+    </section>
+
+    <section id="quiz-sec" class="card">
+      <h2>Find your blend</h2>
+      <form id="quiz">
+        <fieldset><legend>How much milk do you add?</legend>
+          <label><input type="radio" name="milk" value="lots" required> Lots, it's a proper kaapi</label>
+          <label><input type="radio" name="milk" value="some"> A splash</label>
+          <label><input type="radio" name="milk" value="none"> None, I drink it black</label></fieldset>
+        <fieldset><legend>How strong?</legend>
+          <label><input type="radio" name="strength" value="mild" required> Mild</label>
+          <label><input type="radio" name="strength" value="medium"> Medium</label>
+          <label><input type="radio" name="strength" value="strong"> Wake-the-house strong</label></fieldset>
+        <fieldset><legend>Chicory?</legend>
+          <label><input type="radio" name="chicory" value="yes" required> Yes please</label>
+          <label><input type="radio" name="chicory" value="no"> No</label>
+          <label><input type="radio" name="chicory" value="unsure"> Not sure</label></fieldset>
+        <button class="btn" type="submit">Show my match</button>
+      </form>
+      <div id="quiz-result" aria-live="polite"></div>
+    </section>
+
+    <section id="build" class="card">
+      <h2>Build your subscription</h2>
+      <div class="toggle" role="group" aria-label="Market"><button type="button" data-currency="INR">India (₹)</button><button type="button" data-currency="AUD">Australia (A$)</button></div>
+      <label for="bags">How many bags?</label>
+      <input id="bags" type="range" min="1" max="6" value="2"><output id="bags-out"></output>
+      <label for="frequency">Delivery</label>
+      <select id="frequency"><option value="once">One-off order</option><option value="monthly" selected>Monthly (save 10%)</option><option value="fortnightly">Fortnightly (save 15%)</option></select>
+      <table class="quote"><tr><td>Subtotal</td><td id="q-subtotal"></td></tr><tr><td>Subscription saving</td><td id="q-discount"></td></tr><tr><td>Shipping</td><td id="q-shipping"></td></tr><tr class="total"><td>Total per delivery</td><td id="q-total"></td></tr></table>
+      <p id="q-percup" class="muted"></p>
+      <button id="add-to-cart" class="btn" type="button">Add to cart</button>
+      <p id="cart-msg" class="muted" aria-live="polite"></p>
+    </section>
+
+    <section class="grid3 reviews" aria-label="Sample reviews">
+      <blockquote>"Tastes like Sunday at my grandmother's in Mylapore." <cite>Sample review copy</cite></blockquote>
+      <blockquote>"Finally a filter coffee I can get in Perth without a 40-minute drive." <cite>Sample review copy</cite></blockquote>
+      <blockquote>"The quiz nailed it. Peaberry with lots of milk." <cite>Sample review copy</cite></blockquote>
+    </section>
+
+    <section id="waitlist" class="card accent">
+      <h2>Join the launch list, get 15% off your first bag</h2>
+      <form id="lead-form" novalidate>
+        <input id="email" type="email" placeholder="you@email.com" aria-label="Email" autocomplete="email">
+        <select id="market" aria-label="Where you live"><option>India</option><option>Australia</option><option>UAE</option><option>Other</option></select>
+        <button class="btn" type="submit">Join</button>
+      </form>
+      <p id="lead-msg" class="msg" aria-live="polite"></p>
+      <p class="muted small">Demo only: emails stay in your own browser (localStorage) and are never sent anywhere.</p>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <details><summary>What's chicory and why is it in filter coffee?</summary><p>Roasted chicory root adds body and a caramel bitterness that holds up to lots of milk. Our Estate Pure blend has none.</p></details>
+      <details><summary>Do I need a steel filter?</summary><p>No. Every blend comes with a French-press and pour-over brew guide too.</p></details>
+      <details><summary>Can I skip a month?</summary><p>Yes. Skip, pause or cancel from your account any time (in this concept).</p></details>
+    </section>
+
+    <section id="admin" class="card admin" hidden>
+      <h2>Marketer view (demo)</h2>
+      <p>Leads captured in this browser: <strong id="lead-count">0</strong> (<span id="lead-split"></span>)</p>
+      <button id="export-csv" class="btn" type="button">Export leads CSV</button> <button id="clear-leads" class="btn ghost" type="button">Clear</button>
+      <h3>dataLayer events</h3><ul id="event-log" class="log"></ul>
+    </section>
+  </main>
+  <footer>Concept by Yash Sarkar · fictional brand, not affiliated with any real company · <a href="?admin=1">marketer view</a></footer>
+  <script src="js/logic.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

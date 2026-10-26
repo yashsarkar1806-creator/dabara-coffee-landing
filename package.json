@@ -1,0 +1,9 @@
+{
+  "name": "dabara-coffee-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page + growth instrumentation for a fictional DTC filter-coffee brand",
+  "scripts": { "test": "node --test tests/" },
+  "license": "MIT",
+  "devDependencies": { "jsdom": "^24.1.0" }
+}
